@@ -11,20 +11,24 @@
 > /records
 
 ``` Python 
+records = {
+    "_id": 1,
+    "name": "peanut allergy",
+    "category": "allergy",
+    "symptoms": "rash"
+},
 {
-    "allergy": "List of allergies",
-    "banana": "reason allergy exists",
-},
-{ 
-    "conditions": "list of conditions",
-    "Asthma": "Info on asthma"
-},
+    "_id": 2,
+    "name": "asthma",
+    "category": "lung conditions",
+    "symptoms": "shortness of breath, weezing"
+}
 ...
 ```
 
-> /records/conditions
+> /records/category
 
-# Returns list of conditions
+# Returns the categories of conditions
 
 ``` Python
 
@@ -35,18 +39,17 @@
 }
 ```
 
-> /records/allergy
+> /records/category/allergy
 
 # Returns list of allergies
 
 ``` Python
 
 {
-    "allergy": "nuts",
-    "fact": "information on allergy"
+    "category": "allergy",
+    "name": "certain allergy:
     ...
 }
-
 ```
 
 
