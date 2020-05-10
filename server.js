@@ -23,3 +23,4 @@ app.listen(port, () => {
     console.log('we are live on ' + port)
 })
 
+module.exports = app;
