@@ -14,5 +14,14 @@ module.exports = function (app) {
     })
   });
 
+  app.get('/', (req, res) => {
+    Record.find()
+    .then(records => {
+        res.send({ records });
+        // res.render('home', {});
+    }).catch(err => {
+        console.log(err.message);
+    })
+})
     // 
 }
