@@ -21,7 +21,9 @@ describe("User", function() {
             res.should.have.status(200);
             agent.should.have.cookie("nToken");
             done();
-        })
+            })
+        });
     });
-});
+
+    
 });
