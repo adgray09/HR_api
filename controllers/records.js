@@ -25,5 +25,14 @@ module.exports = function (app) {
         console.log(err.message);
     })
 })
-    // 
-}
+
+  app.get('/records/category', (req, res) => {
+    Record.find(req.params.id).select("-name -symptoms -_id -__v")
+    .then(categories => {
+      res.send({ categories })
+    }).catch(err => {
+    console.log(err.message)
+  })
+})
+
+};
