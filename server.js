@@ -4,6 +4,10 @@ const MongoClient = require('mongodb').MongoClient
 const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
+const mongoose = require('mongoose')
+const mongo_uri = process.env.MONGODB_URI
+mongoose.connect(mongo_uri, { useNewUrlParser: true })
+
 
 
 app.use(bodyParser.json());
