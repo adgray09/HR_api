@@ -14,6 +14,8 @@ module.exports = function (app) {
     })
   });
 
+  // get request at index
+
   app.get('/', (req, res) => {
     Record.find()
     .then(records => {
